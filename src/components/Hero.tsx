@@ -39,7 +39,7 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center clip-path-wave pt-20 pb-32 px-6 bg-cover bg-center"
       style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 48, 71, 0.7), rgba(0, 48, 71, 0.7)), url("https://www.eduardocallejoosteopatia.com/images/portada01.webp")',
+        backgroundImage: 'linear-gradient(rgba(0, 48, 71, 0.7), rgba(0, 48, 71, 0.7)), url("public/lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png")',
         backgroundAttachment: 'fixed'
       }}
     >
@@ -49,7 +49,7 @@ const Hero = () => {
           style={{ animationDelay: '0.2s' }}
         >
           <span className="inline-block py-1 px-4 rounded-full bg-osteo-blue/20 text-white text-sm font-medium tracking-wider mb-6">
-            OSTEOPATÍA · FISIOTERAPIA · BIENESTAR
+            OSTEOPATÍA · BIENESTAR
           </span>
         </div>
         

@@ -50,7 +50,7 @@ const About = () => {
           >
             <div className="relative">
               <img 
-                src="https://www.eduardocallejoosteopatia.com/images/perfil.webp" 
+                src="public/lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png" 
                 alt="Eduardo Callejo Osteópata" 
                 className="rounded-2xl shadow-medium w-full object-cover"
                 style={{ height: '500px' }}

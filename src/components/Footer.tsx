@@ -7,7 +7,13 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <div className="font-serif text-2xl font-bold mb-4">Eduardo Callejo</div>
+            <div className="mb-6">
+              <img 
+                src="public/lovable-uploads/ab5850b7-b8e6-49f7-b115-5c68a516be2e.png" 
+                alt="Eduardo Callejo Osteopatía Logo" 
+                className="h-24"
+              />
+            </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Osteópata especializado en el tratamiento integral de pacientes, 
               enfocado en encontrar y tratar la causa de tu dolor para mejorar tu calidad de vida.
