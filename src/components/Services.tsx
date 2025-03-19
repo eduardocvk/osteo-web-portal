@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 
 const services = [
@@ -15,7 +14,7 @@ const services = [
   {
     id: 2,
     title: "Osteopatía Visceral",
-    description: "Mejora de la función de órganos internos, tratamiento de problemas digestivos, respiratorios y otros trastornos funcionales.",
+    description: "Mejora de la función de órganos internos, tratamiento de problemas digestivos, respiratorios y dolores musculoesqueléticos referidos.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-osteo-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -34,16 +33,6 @@ const services = [
   },
   {
     id: 4,
-    title: "Fisioterapia",
-    description: "Rehabilitación de lesiones, tratamiento post-quirúrgico, y recuperación funcional para mejorar la movilidad y aliviar el dolor.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-osteo-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
-    ),
-  },
-  {
-    id: 5,
     title: "Punción Seca",
     description: "Técnica mínimamente invasiva para el tratamiento de puntos gatillo y dolor muscular crónico.",
     icon: (
@@ -53,9 +42,9 @@ const services = [
     ),
   },
   {
-    id: 6,
-    title: "Asesoramiento Ergonómico",
-    description: "Consejos personalizados para mejorar la postura y prevenir lesiones en el trabajo y actividades diarias.",
+    id: 5,
+    title: "Posturología",
+    description: "Evaluación y tratamiento de alteraciones posturales para prevenir dolores y mejorar la eficiencia del movimiento.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-osteo-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

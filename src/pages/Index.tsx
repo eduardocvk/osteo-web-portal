@@ -60,12 +60,12 @@ const Index = () => {
     lazyLoadImages();
     
     // Update document title
-    document.title = 'Eduardo Callejo | Osteopatía y Fisioterapia en Madrid';
+    document.title = 'Eduardo Callejo | Osteopatía en Madrid';
     
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Osteopatía y fisioterapia especializada en Madrid. Tratamientos personalizados para mejorar tu calidad de vida. Reserva tu cita online.');
+      metaDescription.setAttribute('content', 'Osteopatía especializada en Madrid. Tratamientos personalizados para mejorar tu calidad de vida. Reserva tu cita online.');
     }
     
   }, []);

@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="font-serif text-2xl font-bold mb-4">Eduardo Callejo</div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Osteópata y fisioterapeuta especializado en el tratamiento integral de pacientes, 
+              Osteópata especializado en el tratamiento integral de pacientes, 
               enfocado en encontrar y tratar la causa de tu dolor para mejorar tu calidad de vida.
             </p>
             <div className="flex space-x-4">
@@ -56,10 +56,10 @@ const Footer = () => {
                 <a href="#services" className="text-gray-300 hover:text-white transition-colors">Osteopatía Craneal</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors">Fisioterapia</a>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">Punción Seca</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors">Punción Seca</a>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">Posturología</a>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-300">Calle Tomelloso, 49, Madrid</span>
+                <span className="text-gray-300">Plaza de Santa Cristina 4, 28011, Madrid</span>
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-osteo-blue mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

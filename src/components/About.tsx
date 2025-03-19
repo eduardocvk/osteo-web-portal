@@ -56,8 +56,8 @@ const About = () => {
                 style={{ height: '500px' }}
               />
               <div className="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-soft p-4">
-                <div className="text-osteo-dark-blue font-serif text-lg font-semibold">+10 años</div>
-                <div className="text-osteo-blue text-sm">de experiencia</div>
+                <div className="text-osteo-dark-blue font-serif text-lg font-semibold">Osteópata</div>
+                <div className="text-osteo-blue text-sm">especializado</div>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const About = () => {
             </h3>
 
             <p className="text-gray-700 mb-6">
-              Soy Eduardo Callejo, osteópata y fisioterapeuta con más de 10 años de experiencia. Mi enfoque se basa en un tratamiento integral del paciente, abordando no solo los síntomas sino también el origen de tus dolencias para lograr resultados duraderos.
+              Soy Eduardo Callejo, osteópata con experiencia en el tratamiento integral del paciente. Mi enfoque se basa en abordar no solo los síntomas sino también el origen de tus dolencias para lograr resultados duraderos.
             </p>
 
             <p className="text-gray-700 mb-6">

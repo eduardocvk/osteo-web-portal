@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Phone, MapPin, Clock } from 'lucide-react';
 
@@ -12,7 +11,7 @@ const contactInfo = [
   {
     id: 2,
     title: "Dirección",
-    detail: "Calle Tomelloso, 49, Madrid",
+    detail: "Plaza de Santa Cristina 4, 28011, Madrid",
     icon: <MapPin size={24} className="text-osteo-blue" />,
   },
   {
@@ -75,7 +74,7 @@ const Contact = () => {
           >
             <div className="bg-white shadow-medium rounded-2xl overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.3048381137213!2d-3.6399371846064477!3d40.41956177936464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4225f268e4abbb%3A0xf728e013e19d4da1!2sCalle%20Tomelloso%2C%2049%2C%2028026%20Madrid!5e0!3m2!1ses!2ses!4v1623258952142!5m2!1ses!2ses" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.5811908939074!2d-3.7340123233838694!3d40.43643647143067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4229106d32e85f%3A0xe432e281e4632a40!2sPlaza%20de%20Santa%20Cristina%2C%204%2C%2028011%20Madrid!5e0!3m2!1ses!2ses!4v1691251234567!5m2!1ses!2ses" 
                 width="100%" 
                 height="250" 
                 style={{ border: 0 }} 
