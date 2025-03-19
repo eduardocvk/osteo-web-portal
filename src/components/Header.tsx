@@ -36,13 +36,17 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a 
           href="#" 
-          className="font-serif text-2xl font-bold text-osteo-dark-blue hover:text-osteo-blue transition-colors duration-300"
+          className="flex items-center"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          Eduardo Callejo
+          <img 
+            src="public/lovable-uploads/e5905a92-fb0b-48cc-9be8-a55b397b062d.png" 
+            alt="Eduardo Callejo Osteopatía Logo" 
+            className="h-10 mr-2"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -70,7 +74,12 @@ const Header = () => {
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex justify-end p-6">
+          <div className="flex justify-between items-center p-6">
+            <img 
+              src="public/lovable-uploads/e5905a92-fb0b-48cc-9be8-a55b397b062d.png" 
+              alt="Eduardo Callejo Osteopatía Logo" 
+              className="h-8"
+            />
             <button 
               onClick={() => setIsMenuOpen(false)}
               className="p-2 rounded-md focus:outline-none"
