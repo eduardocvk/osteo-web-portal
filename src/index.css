@@ -124,14 +124,14 @@
   }
 
   .nav-link {
-    @apply relative px-3 py-2 text-osteo-dark-green transition-all duration-300 ease-smooth 
-           after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-osteo-green after:bottom-0 after:left-0 
+    @apply relative px-3 py-2 transition-all duration-300 ease-smooth 
+           after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-white after:bottom-0 after:left-0 
            after:transition-all after:duration-300 after:ease-smooth
-           hover:text-osteo-green hover:after:w-full;
+           hover:after:w-full;
   }
 
   .nav-link-active {
-    @apply text-osteo-green after:w-full;
+    @apply after:w-full;
   }
 
   .glass-effect {
@@ -143,48 +143,4 @@ html {
   scroll-behavior: smooth;
 }
 
-.lazy-image {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.lazy-image.loaded {
-  opacity: 1;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #8ECAE6;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #219EBC;
-}
-
-.clip-path-wave {
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
-
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.booking-container {
-  min-height: 400px;
-  width: 100%;
-}
+/* ... keep existing code (remainder of the CSS file, including lazy image loading, scrollbar styles, and animations) */

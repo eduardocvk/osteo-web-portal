@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-smooth px-6 sm:px-8 md:px-12 lg:px-16 py-4
-        ${isScrolled ? 'bg-white/90 shadow-soft backdrop-blur-md' : 'bg-transparent'}
+        ${isScrolled ? 'bg-osteo-green/95 shadow-soft backdrop-blur-md' : 'bg-osteo-green'}
       `}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -51,10 +51,10 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
-          <button onClick={() => scrollToSection('about')} className="nav-link">Sobre mí</button>
-          <button onClick={() => scrollToSection('services')} className="nav-link">Servicios</button>
-          <button onClick={() => scrollToSection('contact')} className="nav-link">Contacto</button>
-          <button onClick={() => scrollToSection('booking')} className="btn btn-primary ml-4 px-6 py-2 rounded-full">
+          <button onClick={() => scrollToSection('about')} className="nav-link text-white hover:text-osteo-light-green">Sobre mí</button>
+          <button onClick={() => scrollToSection('services')} className="nav-link text-white hover:text-osteo-light-green">Servicios</button>
+          <button onClick={() => scrollToSection('contact')} className="nav-link text-white hover:text-osteo-light-green">Contacto</button>
+          <button onClick={() => scrollToSection('booking')} className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green ml-4 px-6 py-2 rounded-full transition-colors">
             Reservar Cita
           </button>
         </nav>
@@ -65,12 +65,12 @@ const Header = () => {
           className="md:hidden p-2 rounded-md focus:outline-none"
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
-          {isMenuOpen ? <X className="w-6 h-6 text-osteo-dark-blue" /> : <Menu className="w-6 h-6 text-osteo-dark-blue" />}
+          {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
         </button>
 
         {/* Mobile Navigation */}
         <div 
-          className={`fixed inset-0 bg-white z-50 transition-transform duration-300 ease-smooth md:hidden ${
+          className={`fixed inset-0 bg-osteo-green z-50 transition-transform duration-300 ease-smooth md:hidden ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -85,31 +85,31 @@ const Header = () => {
               className="p-2 rounded-md focus:outline-none"
               aria-label="Close menu"
             >
-              <X className="w-6 h-6 text-osteo-dark-blue" />
+              <X className="w-6 h-6 text-white" />
             </button>
           </div>
           <nav className="flex flex-col items-center justify-center space-y-8 p-8 h-full">
             <button 
               onClick={() => scrollToSection('about')} 
-              className="text-xl font-medium text-osteo-dark-blue hover:text-osteo-blue transition-colors"
+              className="text-xl font-medium text-white hover:text-osteo-light-green transition-colors"
             >
               Sobre mí
             </button>
             <button 
               onClick={() => scrollToSection('services')} 
-              className="text-xl font-medium text-osteo-dark-blue hover:text-osteo-blue transition-colors"
+              className="text-xl font-medium text-white hover:text-osteo-light-green transition-colors"
             >
               Servicios
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
-              className="text-xl font-medium text-osteo-dark-blue hover:text-osteo-blue transition-colors"
+              className="text-xl font-medium text-white hover:text-osteo-light-green transition-colors"
             >
               Contacto
             </button>
             <button 
               onClick={() => scrollToSection('booking')} 
-              className="btn btn-primary px-8 py-3 rounded-full text-lg"
+              className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green px-8 py-3 rounded-full text-lg transition-colors"
             >
               Reservar Cita
             </button>
