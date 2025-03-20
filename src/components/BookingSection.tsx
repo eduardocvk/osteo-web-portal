@@ -48,7 +48,7 @@ const BookingSection = () => {
           script2.type = "text/javascript";
           script2.textContent = `
             var widget = new SimplybookWidget({
-              "widget_type": "iframe",
+              "widget_type": "button",
               "url": "https://educallejo.simplybook.it",
               "theme": "dainty",
               "theme_settings": {
@@ -72,6 +72,7 @@ const BookingSection = () => {
               "timeline": "flexible_week",
               "datepicker": "top_calendar",
               "is_rtl": false,
+              "container_id": "booking-container",
               "app_config": {
                 "clear_session": 0,
                 "allow_switch_to_ada": 0,
