@@ -29,17 +29,33 @@ const BookingSection = () => {
     document.head.appendChild(script1);
 
     script1.onload = () => {
-      const script2 = document.createElement('script');
-      script2.type = "text/javascript";
-      script2.text = `
-        var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\\/\\/educallejo.simplybook.it","theme":"dainty","theme_settings":{"timeline_show_end_time":"1","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#1dc495","secondary_color":"#e4ebf5","sb_text_color":"#a1a1a1","display_item_mode":"block","body_bg_color":"#ffffff","sb_background_image":"","sb_review_image":"","dark_font_color":"#293b36","light_font_color":"#ffffff","btn_color_1":"#1dc495","sb_company_label_color":"#ffffff","sb_cancellation_color":"#ff7a93","hide_img_mode":"0"},"timeline":"flexible_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});
-      `;
-      document.body.appendChild(script2);
+      // Only create the second script if the widget container exists
+      const bookingContainer = document.getElementById('booking-container');
+      if (bookingContainer) {
+        const script2 = document.createElement('script');
+        script2.type = "text/javascript";
+        script2.text = `
+          var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\\/\\/educallejo.simplybook.it","theme":"dainty","theme_settings":{"timeline_show_end_time":"1","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#1dc495","secondary_color":"#e4ebf5","sb_text_color":"#a1a1a1","display_item_mode":"block","body_bg_color":"#ffffff","sb_background_image":"","sb_review_image":"","dark_font_color":"#293b36","light_font_color":"#ffffff","btn_color_1":"#1dc495","sb_company_label_color":"#ffffff","sb_cancellation_color":"#ff7a93","hide_img_mode":"0"},"timeline":"flexible_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});
+        `;
+        document.body.appendChild(script2);
+      }
     };
 
     return () => {
       elementsRef.current.forEach(el => {
         if (el) observer.unobserve(el);
+      });
+      
+      // Remove the scripts when component unmounts
+      const simplyWidgetScripts = document.querySelectorAll('script[src*="widget.simplybook.it"]');
+      simplyWidgetScripts.forEach(script => script.remove());
+      
+      // Remove any script that contains the SimplybookWidget initialization
+      const scriptElements = document.querySelectorAll('script');
+      scriptElements.forEach(script => {
+        if (script.textContent && script.textContent.includes('SimplybookWidget')) {
+          script.remove();
+        }
       });
     };
   }, []);
