@@ -43,7 +43,7 @@ const Header = () => {
           }}
         >
           <img 
-            src="public/lovable-uploads/e5905a92-fb0b-48cc-9be8-a55b397b062d.png" 
+            src={isScrolled ? "public/lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png" : "public/lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png"} 
             alt="Eduardo Callejo Osteopatía Logo" 
             className="h-10 mr-2"
           />
@@ -54,8 +54,8 @@ const Header = () => {
           <button onClick={() => scrollToSection('about')} className="nav-link text-white hover:text-osteo-light-green">Sobre mí</button>
           <button onClick={() => scrollToSection('services')} className="nav-link text-white hover:text-osteo-light-green">Servicios</button>
           <button onClick={() => scrollToSection('contact')} className="nav-link text-white hover:text-osteo-light-green">Contacto</button>
-          <button onClick={() => scrollToSection('booking')} className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green ml-4 px-6 py-2 rounded-full transition-colors">
-            Reservar Cita
+          <button onClick={() => scrollToSection('booking')} className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green ml-4 px-6 py-2 rounded-full transition-colors font-medium">
+            Reserva Cita
           </button>
         </nav>
 
@@ -76,7 +76,7 @@ const Header = () => {
         >
           <div className="flex justify-between items-center p-6">
             <img 
-              src="public/lovable-uploads/e5905a92-fb0b-48cc-9be8-a55b397b062d.png" 
+              src="public/lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png" 
               alt="Eduardo Callejo Osteopatía Logo" 
               className="h-8"
             />
@@ -109,9 +109,9 @@ const Header = () => {
             </button>
             <button 
               onClick={() => scrollToSection('booking')} 
-              className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green px-8 py-3 rounded-full text-lg transition-colors"
+              className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green px-8 py-3 rounded-full text-lg transition-colors font-medium"
             >
-              Reservar Cita
+              Reserva Cita
             </button>
           </nav>
         </div>

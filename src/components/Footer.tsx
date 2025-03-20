@@ -1,15 +1,13 @@
 
-import { Instagram, Facebook, Twitter } from 'lucide-react';
-
 const Footer = () => {
   return (
     <footer className="bg-osteo-green text-white pt-16 pb-8">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-2">
-            <div className="mb-6 bg-white inline-block p-2 rounded-lg">
+            <div className="mb-6">
               <img 
-                src="public/lovable-uploads/e5905a92-fb0b-48cc-9be8-a55b397b062d.png" 
+                src="public/lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png" 
                 alt="Eduardo Callejo Osteopatía Logo" 
                 className="h-24"
               />
@@ -18,35 +16,6 @@ const Footer = () => {
               Osteópata especializado en el tratamiento integral de pacientes, 
               enfocado en encontrar y tratar la causa de tu dolor para mejorar tu calidad de vida.
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="https://www.instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-osteo-green transition-all duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href="https://www.facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-osteo-green transition-all duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href="https://www.twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-osteo-green transition-all duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -61,12 +30,6 @@ const Footer = () => {
               <li>
                 <a href="#services" className="text-white/80 hover:text-white transition-colors">Osteopatía Craneal</a>
               </li>
-              <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Punción Seca</a>
-              </li>
-              <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Posturología</a>
-              </li>
             </ul>
           </div>
 
@@ -77,7 +40,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-osteo-light-green mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="text-white/80">info@eduardocallejoosteopatia.com</span>
+                <span className="text-white/80">eduardocallejoosteopatia@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-osteo-light-green mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,7 +59,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-osteo-light-green mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-white/80">Lun-Vie: 9:00-20:00</span>
+                <span className="text-white/80">Lun-Vie: 16:00-20:30</span>
               </li>
             </ul>
           </div>

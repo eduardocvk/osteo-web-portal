@@ -73,15 +73,15 @@ const Hero = () => {
         >
           <button 
             onClick={scrollToBooking}
-            className="btn bg-osteo-yellow hover:bg-osteo-orange text-osteo-dark-blue hover:text-white px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
+            className="btn bg-white hover:bg-white/90 text-osteo-dark-green font-medium px-8 py-3 rounded-full text-base transition-all duration-300"
           >
-            Reservar Consulta
+            Reserva Consulta
           </button>
           <a 
             href="#services" 
-            className="btn bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
+            className="btn bg-transparent hover:bg-white/20 text-white border border-white/70 px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
           >
-            Conocer servicios
+            Conoce mis servicios
           </a>
         </div>
       </div>

@@ -22,6 +22,21 @@ const BookingSection = () => {
       if (el) observer.observe(el);
     });
 
+    // Add SimplyBook widget script
+    const script1 = document.createElement('script');
+    script1.src = "//widget.simplybook.it/v2/widget/widget.js";
+    script1.type = "text/javascript";
+    document.head.appendChild(script1);
+
+    script1.onload = () => {
+      const script2 = document.createElement('script');
+      script2.type = "text/javascript";
+      script2.text = `
+        var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\\/\\/educallejo.simplybook.it","theme":"dainty","theme_settings":{"timeline_show_end_time":"1","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#1dc495","secondary_color":"#e4ebf5","sb_text_color":"#a1a1a1","display_item_mode":"block","body_bg_color":"#ffffff","sb_background_image":"","sb_review_image":"","dark_font_color":"#293b36","light_font_color":"#ffffff","btn_color_1":"#1dc495","sb_company_label_color":"#ffffff","sb_cancellation_color":"#ff7a93","hide_img_mode":"0"},"timeline":"flexible_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});
+      `;
+      document.body.appendChild(script2);
+    };
+
     return () => {
       elementsRef.current.forEach(el => {
         if (el) observer.unobserve(el);
@@ -39,7 +54,7 @@ const BookingSection = () => {
           >
             <span className="section-subtitle">Reservas</span>
             <h2 className="section-title">Reserva tu Cita</h2>
-            <div className="w-16 h-1 bg-osteo-blue mx-auto mt-4 mb-6"></div>
+            <div className="w-16 h-1 bg-osteo-green mx-auto mt-4 mb-6"></div>
             <p className="max-w-2xl mx-auto text-gray-700">
               Utiliza nuestro sistema de reservas online para encontrar el día y la hora que mejor se adapte a tu agenda.
             </p>
@@ -51,18 +66,7 @@ const BookingSection = () => {
           className="animate-on-scroll"
         >
           <div className="bg-white shadow-medium rounded-2xl p-8">
-            {/* Esta sección es donde se incluirá el script de reservas */}
-            <div className="booking-container flex items-center justify-center">
-              <div className="text-center p-8">
-                <h3 className="text-xl font-semibold text-osteo-dark-blue mb-4">Sistema de Reservas</h3>
-                <p className="text-gray-600 mb-6">
-                  Aquí se integrará el sistema de reservas. Proximamente estará disponible.
-                </p>
-                <div className="animate-pulse inline-block">
-                  <div className="h-8 w-40 bg-osteo-light-blue rounded-md"></div>
-                </div>
-              </div>
-            </div>
+            <div id="booking-container" className="w-full min-h-[600px]"></div>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ const contactInfo = [
   {
     id: 3,
     title: "Horario",
-    detail: "Lun-Vie: 9:00-20:00",
+    detail: "Lun-Vie: 16:00-20:30",
     icon: <Clock size={24} className="text-osteo-green" />,
   },
 ];

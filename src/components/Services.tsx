@@ -34,29 +34,7 @@ const services = [
       </svg>
     ),
     image: "public/lovable-uploads/fa0717ae-2822-4252-b24b-4abcb9e80ccf.png"
-  },
-  {
-    id: 4,
-    title: "Punción Seca",
-    description: "Técnica mínimamente invasiva para el tratamiento de puntos gatillo y dolor muscular crónico.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-osteo-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    image: "public/lovable-uploads/3deb8f5a-16ae-40aa-9e72-2eba9dfd5613.png"
-  },
-  {
-    id: 5,
-    title: "Posturología",
-    description: "Evaluación y tratamiento de alteraciones posturales para prevenir dolores y mejorar la eficiencia del movimiento.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-osteo-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    image: "public/lovable-uploads/459064bd-7a4b-4ae2-a0d8-5e0cf0fba28d.png"
-  },
+  }
 ];
 
 const Services = () => {
@@ -105,7 +83,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={service.id}
@@ -132,7 +110,7 @@ const Services = () => {
         </div>
         
         <div 
-          ref={el => elementsRef.current[7] = el}
+          ref={el => elementsRef.current[4] = el}
           className="mt-16 text-center animate-on-scroll"
         >
           <div className="inline-block p-8 rounded-2xl bg-white shadow-soft">
