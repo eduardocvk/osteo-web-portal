@@ -7,7 +7,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-6">
               <img 
-                src="public/lovable-uploads/ff7b84d0-4305-4390-9301-a80d88af0b13.png" 
+                src="./lovable-uploads/ff7b84d0-4305-4390-9301-a80d88af0b13.png" 
                 alt="Eduardo Callejo Osteopatía Logo" 
                 className="h-24"
               />

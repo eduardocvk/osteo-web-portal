@@ -68,11 +68,11 @@ const Index = () => {
       metaDescription.setAttribute('content', 'Osteopatía especializada en Madrid. Tratamientos personalizados para mejorar tu calidad de vida. Reserva tu cita online.');
     }
     
-    // Add preload for critical images
+    // Add preload for critical images - fix paths for GitHub Pages
     const preloadImages = [
-      'public/lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png',
-      'public/lovable-uploads/b5c22267-f7a1-4ba2-a30a-65be8b1e73a7.png',
-      'public/lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png'
+      './lovable-uploads/156dd5a9-3266-49ff-bb5f-c42cd9becceb.png',
+      './lovable-uploads/b5c22267-f7a1-4ba2-a30a-65be8b1e73a7.png',
+      './lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png'
     ];
     
     preloadImages.forEach(imageUrl => {
