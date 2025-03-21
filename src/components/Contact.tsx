@@ -25,6 +25,9 @@ const contactInfo = [
 
 const Contact = () => {
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]);
+  
+  // Hidden recipient email
+  const recipientEmail = "eduardocvk@gmail.com";
 
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -112,15 +115,17 @@ const Contact = () => {
             <div className="bg-white shadow-medium rounded-2xl p-8">
               <h3 className="text-xl font-semibold text-osteo-dark-green mb-6">Envíame un Mensaje</h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6" action={`https://formsubmit.co/${recipientEmail}`} method="POST">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
                     <input 
                       type="text" 
-                      id="name" 
+                      id="name"
+                      name="name"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-osteo-green focus:border-osteo-green transition-all duration-200 outline-none"
                       placeholder="Tu nombre"
+                      required
                     />
                   </div>
                   
@@ -128,9 +133,11 @@ const Contact = () => {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                     <input 
                       type="email" 
-                      id="email" 
+                      id="email"
+                      name="email"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-osteo-green focus:border-osteo-green transition-all duration-200 outline-none"
                       placeholder="Tu email"
+                      required
                     />
                   </div>
                 </div>
@@ -139,21 +146,28 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
                   <input 
                     type="text" 
-                    id="subject" 
+                    id="subject"
+                    name="_subject"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-osteo-green focus:border-osteo-green transition-all duration-200 outline-none"
                     placeholder="Asunto de tu mensaje"
+                    required
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
                   <textarea 
-                    id="message" 
+                    id="message"
+                    name="message"
                     rows={5} 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-osteo-green focus:border-osteo-green transition-all duration-200 outline-none resize-none"
                     placeholder="¿En qué puedo ayudarte?"
+                    required
                   ></textarea>
                 </div>
+                
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value={window.location.href} />
                 
                 <div>
                   <button 
