@@ -93,7 +93,7 @@ const Index = () => {
         <About />
         <Services />
         <Contact />
-        <BookingSection />
+   
       </main>
       <Footer />
       <WhatsAppButton />
