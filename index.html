@@ -178,8 +178,16 @@
             </div>
             <div class="booking-content">
               <div class="booking-info">
-                <p>Para agendar tu cita, puedes contactarme directamente por teléfono o enviándome un mensaje a través del formulario de contacto.</p>
-                <p>También puedes reservar directamente a través de WhatsApp usando el botón que encontrarás en la parte inferior derecha de esta página.</p>
+                <div id="osteo-widget"></div>
+<script src="widget.js"></script>
+<script>
+  OsteoWidget.init({
+    container: 'osteo-widget',
+    theme: 'light', // or 'dark'
+    lang: 'es',
+    apiKey: 'TU_API_KEY'
+  });
+</script>
               </div>
             </div>
           </div>
