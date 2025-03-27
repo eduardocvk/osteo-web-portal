@@ -282,6 +282,7 @@ img {
 .about-img {
   border-radius: var(--radius);
   box-shadow: var(--shadow-medium);
+  max-width: 60%;
 }
 
 .about-text {
@@ -326,8 +327,8 @@ img {
 }
 
 .service-img {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
