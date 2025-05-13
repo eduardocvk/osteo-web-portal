@@ -14,7 +14,7 @@ const Index = () => {
             Sistema de Reservas para Osteopatía
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Reserva tu cita de manera rápida y sencilla. Selecciona fecha, hora y completa tus datos.
+            Reserva tu cita para tratamientos sin dolor de manera rápida y sencilla. Selecciona fecha, hora y completa tus datos.
           </p>
           <div className="mt-4">
             <Button asChild variant="outline" className="gap-2">
