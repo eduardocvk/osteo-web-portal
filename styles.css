@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .header {
-    background: white;
+    background: #006633;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
@@ -49,21 +49,25 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-.nav-link:hover,
-.nav-link-cta {
-    color: #006633;
+.nav-link:hover {
+    color: #88C474;
 }
 
 .nav-link-cta {
-    background: #006633;
-    color: white !important;
+    background: white;
+    color: #006633 !important;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+}
+
+.nav-link-cta:hover {
+    background: #88C474;
+    color: white !important;
 }
 
 .mobile-menu-btn {
@@ -77,7 +81,7 @@ body {
 .mobile-menu-btn span {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: white;
     margin: 3px 0;
     transition: 0.3s;
 }
