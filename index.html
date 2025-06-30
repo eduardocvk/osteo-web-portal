@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -40,6 +41,7 @@
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
                 <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 <li><a href="#reserva" class="nav-link nav-link-cta">Reservar Cita</a></li>
               </ul>
@@ -126,6 +128,90 @@
                 <h3 class="service-title">Osteopatía Craneal</h3>
                 <p class="service-desc">Se enfoca en tratar disfunciones relacionadas con el Sistema Nervioso Central. Mediante técnicas manuales suaves e indoloras, se busca restaurar la movilidad de los huesos craneales y mejorar la circulación del líquido cefalorraquídeo. Este tratamiento es eficaz para aliviar dolores de cabeza, migrañas, estrés, ansiedad y trastornos del sueño.</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+          <div class="container">
+            <div class="section-header">
+              <span class="section-subtitle">FAQ</span>
+              <h2 class="section-title">Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-content">
+              <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Cómo me preparo para la sesión?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Ven con ropa cómoda. La sesión se realizará normalmente en ropa interior. Si tienes alguna dificultad con esto, cuéntame y buscaremos una solución.</p>
+                  <p>A ser posible, no te apliques cremas en la piel antes de venir.</p>
+                  <p>Si tienes pruebas de imagen o informes médicos relacionados, tráelos si puedes.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Cuántas sesiones voy a necesitar?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>El número de sesiones va a depender del tipo de lesión que tengas, el tiempo que lleves con las molestias y la respuesta de tu cuerpo al tratamiento. Mi objetivo es que notes cambios desde la primera sesión, pero es probable que necesites más sesiones, cada vez más espaciadas en el tiempo.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Cuánto dura la sesión?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>La sesión durará entre 60 y 75 minutos. Probablemente la primera sesión sea un poco más larga.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Me va a doler el tratamiento?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Los tratamientos osteopáticos que realizo no deben ser dolorosos en ningún caso. En momentos puntuales utilizaré alguna técnica que genere algo más de molestia, pero será breve, solo si es soportable, y siempre avisaré antes.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Qué efectos puedo tener después de una sesión?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Después de una sesión de osteopatía es normal que sientas cansancio, que aparezca alguna molestia diferente, pero todo esto durará poco más de 24 horas. A partir de ahí deberías empezar a sentir alivio y una mejora notable.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Qué medios puedo utilizar para pagar la sesión?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>Puedes pagar en efectivo o por Bizum.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-contact">
+              <h3>¿Tienes más preguntas?</h3>
+              <p>No dudes en contactarme para resolver cualquier duda adicional que puedas tener.</p>
+              <a href="https://wa.me/34676435634" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon-small">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                </svg>
+                Contactar por WhatsApp
+              </a>
             </div>
           </div>
         </section>
@@ -221,6 +307,7 @@
                   <li><a href="#inicio">Inicio</a></li>
                   <li><a href="#sobre-mi">Sobre Mí</a></li>
                   <li><a href="#servicios">Servicios</a></li>
+                  <li><a href="#faq">FAQ</a></li>
                   <li><a href="#contacto">Contacto</a></li>
                   <li><a href="#reserva">Reservar Cita</a></li>
                 </ul>
