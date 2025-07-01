@@ -89,7 +89,7 @@ body {
 /* Hero Section */
 .hero {
     background: #006633;
-    padding: 120px 0 80px;
+    padding: 120px 0 60px;
 }
 
 .hero-content {
@@ -211,7 +211,7 @@ body {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
 }
 
@@ -340,8 +340,8 @@ body {
 
 .faq-contact {
     text-align: center;
-    margin-top: 3rem;
-    padding: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
     background: #f8f9fa;
     border-radius: 10px;
 }
@@ -365,7 +365,7 @@ body {
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .contact-item {
