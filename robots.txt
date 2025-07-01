@@ -1,8 +1,102 @@
+# robots.txt optimizado para esosteopatiamadrid.com
+# Sitio web HTML/estático - Sin WordPress
+# Última actualización: julio 2025
+# Optimizado para buscadores tradicionales y AI/IA
+
+# === CONFIGURACIÓN PRINCIPAL ===
+# Permitir acceso a todos los principales buscadores
+User-agent: *
+Allow: /
+
+# === CONFIGURACIÓN ESPECÍFICA PARA IA/AI ===
+# OpenAI ChatGPT - PERMITIR para visibilidad en IA
+User-agent: GPTBot
+Allow: /
+
+# Claude (Anthropic) - PERMITIR para visibilidad en IA
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity - PERMITIR para visibilidad en IA
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI (Bard/Gemini) - PERMITIR para entrenar modelos
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl - usado por muchos proyectos de IA
 User-agent: CCBot
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
+# === BLOQUEOS PARA SITIOS ESTÁTICOS ===
+# Archivos de desarrollo y configuración
+Disallow: /admin/
+Disallow: /config/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /test/
+Disallow: /temp/
 
-User-agent: GPTBot
-Allow: /
+# Archivos temporales y de sistema
+Disallow: /*.tmp
+Disallow: /*.log
+Disallow: /*~
+Disallow: /*.bak
+
+# Páginas que pueden crear contenido duplicado
+Disallow: /*?*
+Disallow: /search?
+Disallow: /*?s=*
+Disallow: /*&*
+
+# === PERMITIR ARCHIVOS ESENCIALES ===
+# Hojas de estilo CSS
+Allow: /*.css
+Allow: /css/
+Allow: /styles/
+
+# Archivos JavaScript
+Allow: /*.js
+Allow: /js/
+Allow: /scripts/
+
+# Imágenes
+Allow: /images/
+Allow: /img/
+Allow: /fotos/
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.gif
+Allow: /*.svg
+
+# Documentos PDF informativos
+Allow: /*.pdf
+
+# === CRAWLERS PROBLEMÁTICOS A BLOQUEAR ===
+# Bots que consumen recursos sin valor
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# === SITEMAPS ===
+Sitemap: https://esosteopatiamadrid.com/sitemap.xml
+
+# === CONFIGURACIÓN PARA COMPATIBILIDAD ===
+Crawl-delay: 1
