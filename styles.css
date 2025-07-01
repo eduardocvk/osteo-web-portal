@@ -1,3 +1,4 @@
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -153,6 +154,28 @@ body {
 .btn-secondary:hover {
     background: white;
     color: #006633;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border-color: #25D366;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.btn-whatsapp:hover {
+    background: #20b858;
+    border-color: #20b858;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-icon-btn {
+    width: 20px;
+    height: 20px;
 }
 
 /* Sections */
