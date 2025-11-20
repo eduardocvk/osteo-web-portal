@@ -51,6 +51,86 @@
   ]
 }
 </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Eduardo Callejo Osteopatía",
+  "image": "https://osteopatiamadrid.com/images/Logo-Eduardo-web.png", 
+  "@id": "https://www.osteopatiamadrid.com/#localbusiness",
+  "url": "https://www.osteopatiamadrid.com/",
+  "telephone": "+34676435634",
+  "priceRange": "40€ - 45€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaza de Santa Cristina 4",
+    "addressLocality": "Madrid",
+    "postalCode": "28011",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+   "latitude": 40.4139275, 
+    "longitude": -3.7274617
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "16:00",
+    "closes": "20:00"
+  },
+
+  "medicalSpecialty": "Osteopathic",
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Osteopatía Estructural"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Osteopatía Visceral"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Osteopatía Craneal"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "¿Qué problemas trata la osteopatía?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La osteopatía trata dolencias como dolor de espalda (cervicalgia, lumbalgia), migrañas, vértigos, problemas digestivos, estrés, bruxismo y lesiones deportivas, buscando el origen del problema."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Cuánto dura la sesión de osteopatía?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La sesión dura entre 60 y 75 minutos. La primera visita suele ser un poco más larga para realizar una evaluación completa."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Cuál es el precio de una sesión de osteopatía?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La sesión en consulta (Puerta del Ángel) cuesta 40€. El servicio de osteopatía a domicilio en Madrid tiene un precio de 45€."
+    }
+  }]
+}
+</script>
   </head>
 
   <body>
@@ -214,7 +294,15 @@
                   <p>La sesión durará entre 60 y 75 minutos. Probablemente la primera sesión sea un poco más larga.</p>
                 </div>
               </div>
-
+             <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                  <h3>¿Cuánto cuesta una sesión?</h3>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>La sesión en mi consulta, en Puerta del Ángel, tiene un precio de 40€. La sesión a domicilio son 45€.</p>
+                </div>
+              </div>
               <div class="faq-item">
                 <button class="faq-question" onclick="toggleFAQ(this)">
                   <h3>¿Me va a doler el tratamiento?</h3>
@@ -260,7 +348,6 @@
                 <div class="contact-item">
                   <h3>Dirección</h3>
                   <p>Plaza de Santa Cristina 4, 28011, Madrid</p>
-                  <p>Cerca de Príncipe Pío y Madrid Río</p>
                 </div>
                 <div class="contact-item">
                   <h3>Teléfono</h3>
