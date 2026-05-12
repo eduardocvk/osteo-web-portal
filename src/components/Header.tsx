@@ -122,6 +122,15 @@ const Header = () => {
             >
               Reserva Cita
             </button>
+            <a
+              href="https://www.instagram.com/osteopatiaeducallejo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xl font-medium text-white hover:text-osteo-light-green transition-colors"
+            >
+              <Instagram className="w-6 h-6" />
+              Instagram
+            </a>
           </nav>
         </div>
       </div>
