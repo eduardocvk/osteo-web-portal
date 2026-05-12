@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 
 const Hero = () => {
@@ -23,8 +22,9 @@ const Hero = () => {
     };
   }, []);
 
-  const scrollToBooking = () => {
-    const element = document.getElementById('booking');
+  // Esta es la única función que necesitas. Sirve para todas las secciones.
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       const offsetPosition = element.offsetTop - 80;
       window.scrollTo({
@@ -39,7 +39,8 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center clip-path-wave pt-20 pb-32 px-6 bg-cover bg-center"
       style={{ 
-        backgroundImage: 'linear-gradient(rgba(42, 122, 130, 0.75), rgba(59, 169, 181, 0.65)), url("lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png")',
+        // Corregida la ruta de la imagen con la barra inicial '/'
+        backgroundImage: 'linear-gradient(rgba(42, 122, 130, 0.75), rgba(59, 169, 181, 0.65)), url("/lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png")',
         backgroundAttachment: 'fixed'
       }}
     >
@@ -72,13 +73,13 @@ const Hero = () => {
           style={{ animationDelay: '0.8s' }}
         >
           <button 
-            onClick={scrollToBooking}
+            onClick={() => scrollToSection('booking')}
             className="btn bg-white hover:bg-white/90 text-osteo-dark-green font-medium px-8 py-3 rounded-full text-base transition-all duration-300"
           >
             Reserva Consulta
           </button>
           <button 
-            onClick={scrollToServices} 
+            onClick={() => scrollToSection('services')} 
             className="btn bg-transparent hover:bg-white/20 text-white border border-white/70 px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
           >
             Conoce mis servicios
@@ -88,8 +89,8 @@ const Hero = () => {
       
       <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <button 
-            onClick={scrollToAbout} 
-          className="animate-bounce inline-block mb-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+          onClick={() => scrollToSection('about')} 
+          className="animate-bounce inline-block mb-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 cursor-pointer"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
