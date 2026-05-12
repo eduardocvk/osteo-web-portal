@@ -2,9 +2,8 @@ import { useEffect, useRef } from 'react';
 
 const BookingSection = () => {
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const widgetContainerRef = useRef<HTMLDivElement>(null);
 
-  // Efecto 1: Para las animaciones de scroll
+  // Efecto para las animaciones de scroll
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
@@ -30,28 +29,22 @@ const BookingSection = () => {
     };
   }, []);
 
-  // Efecto 2: Inyectar el widget de SimplyBook correctamente para React
-  useEffect(() => {
-    if (widgetContainerRef.current && widgetContainerRef.current.children.length === 0) {
-      // 1. Cargamos el script principal de SimplyBook
-      const script1 = document.createElement("script");
-      script1.src = "//widget.simplybook.it/v2/widget/widget.js";
-      script1.async = true;
-
-      // 2. Cuando cargue, ejecutamos tu configuración personalizada
-      script1.onload = () => {
-        const script2 = document.createElement("script");
-        script2.type = "text/javascript";
-        script2.innerHTML = `var widget = new SimplybookWidget({"widget_type":"iframe","url":"https://educallejo.simplybook.it","theme":"dainty","theme_settings":{"timeline_show_end_time":"1","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#44acb8","secondary_color":"#e4ebf5","sb_text_color":"#a1a1a1","display_item_mode":"list","body_bg_color":"#ffffff","sb_background_image":"","sb_review_image":"","dark_font_color":"#293b36","light_font_color":"#ffffff","btn_color_1":"#44acb8","sb_company_label_color":"#ffffff","sb_cancellation_color":"#fa4163","hide_img_mode":"0"},"timeline":"flexible_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});`;
-        
-        if (widgetContainerRef.current) {
-          widgetContainerRef.current.appendChild(script2);
-        }
-      };
-
-      widgetContainerRef.current.appendChild(script1);
-    }
-  }, []);
+  // Aquí metemos el código de SimplyBook "en cuarentena"
+  const iframeContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <style>body { margin: 0; padding: 0; background: transparent; }</style>
+      </head>
+      <body>
+        <script src="//widget.simplybook.it/v2/widget/widget.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          var widget = new SimplybookWidget({"widget_type":"iframe","url":"https://educallejo.simplybook.it","theme":"dainty","theme_settings":{"timeline_show_end_time":"1","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#44acb8","secondary_color":"#e4ebf5","sb_text_color":"#a1a1a1","display_item_mode":"list","body_bg_color":"#ffffff","sb_background_image":"","sb_review_image":"","dark_font_color":"#293b36","light_font_color":"#ffffff","btn_color_1":"#44acb8","sb_company_label_color":"#ffffff","sb_cancellation_color":"#fa4163","hide_img_mode":"0"},"timeline":"flexible_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});
+        </script>
+      </body>
+    </html>
+  `;
 
   return (
     <section id="booking" className="section bg-osteo-light-gray">
@@ -75,12 +68,14 @@ const BookingSection = () => {
           className="animate-on-scroll"
         >
           <div className="bg-white shadow-medium rounded-2xl p-8">
-            <div 
-              id="booking-container" 
-              ref={widgetContainerRef}
-              className="w-full min-h-[600px] flex items-center justify-center"
-            >
-              {/* Aquí es donde el useEffect inyectará el calendario de SimplyBook */}
+            <div className="w-full min-h-[600px] flex items-center justify-center rounded-xl overflow-hidden">
+              {/* Este es nuestro escudo protector contra el código de SimplyBook */}
+              <iframe 
+                srcDoc={iframeContent}
+                style={{ width: '100%', height: '650px', border: 'none' }}
+                title="Calendario de reservas SimplyBook"
+                scrolling="no"
+              />
             </div>
           </div>
         </div>
