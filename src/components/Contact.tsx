@@ -106,7 +106,18 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="text-lg font-medium text-osteo-dark-green">{item.title}</h4>
-                        <p className="text-gray-600">{item.detail}</p>
+                        {item.href ? (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-osteo-green transition-colors"
+                          >
+                            {item.detail}
+                          </a>
+                        ) : (
+                          <p className="text-gray-600">{item.detail}</p>
+                        )}
                       </div>
                     </div>
                   ))}
