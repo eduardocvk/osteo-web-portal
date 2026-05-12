@@ -27,7 +27,10 @@ const BookingSection = () => {
         >
           <div className="bg-white shadow-medium rounded-2xl p-8">
             <div id="booking-container" className="w-full min-h-[600px] flex items-center justify-center">
-              <p className="text-gray-500 text-lg">Sistema de reservas temporalmente no disponible.</p>
+              <script src="//widget.simplybook.it/v2/widget/widget.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/educallejo.simplybook.it","theme":"dainty","theme_settings":{"timeline_show_end_time":"1","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#44acb8","secondary_color":"#e4ebf5","sb_text_color":"#a1a1a1","display_item_mode":"list","body_bg_color":"#ffffff","sb_background_image":"","sb_review_image":"","dark_font_color":"#293b36","light_font_color":"#ffffff","btn_color_1":"#44acb8","sb_company_label_color":"#ffffff","sb_cancellation_color":"#fa4163","hide_img_mode":"0"},"timeline":"flexible_week","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});
+</script>
             </div>
           </div>
         </div>
