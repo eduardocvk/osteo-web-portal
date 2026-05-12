@@ -77,12 +77,12 @@ const Hero = () => {
           >
             Reserva Consulta
           </button>
-          <a 
-            href="#servicios" 
+          <button 
+            onClick={scrollToServices} 
             className="btn bg-transparent hover:bg-white/20 text-white border border-white/70 px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
           >
             Conoce mis servicios
-          </a>
+          </button>
         </div>
       </div>
       
