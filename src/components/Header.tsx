@@ -57,6 +57,15 @@ const Header = () => {
           <button onClick={() => scrollToSection('booking')} className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green ml-4 px-6 py-2 rounded-full transition-colors font-medium">
             Reserva Cita
           </button>
+          <a
+            href="https://www.instagram.com/osteopatiaeducallejo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-3 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
