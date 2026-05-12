@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { AspectRatio } from './ui/aspect-ratio';
 
@@ -12,7 +11,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
       </svg>
     ),
-    image: "lovable-uploads/e8d90d0d-0c36-4f16-b9a6-fa242dd1d265.png"
+    // Corregida la ruta con barra inicial
+    image: "/lovable-uploads/e8d90d0d-0c36-4f16-b9a6-fa242dd1d265.png"
   },
   {
     id: 2,
@@ -23,7 +23,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
-    image: "lovable-uploads/3391c8b8-a09f-4040-a1bf-519bac951bea.png"
+    // Corregida la ruta con barra inicial
+    image: "/lovable-uploads/3391c8b8-a09f-4040-a1bf-519bac951bea.png"
   },
   {
     id: 3,
@@ -34,7 +35,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
-    image: "lovable-uploads/fa0717ae-2822-4252-b24b-4abcb9e80ccf.png"
+    // Corregida la ruta con barra inicial
+    image: "/lovable-uploads/fa0717ae-2822-4252-b24b-4abcb9e80ccf.png"
   }
 ];
 
@@ -65,6 +67,18 @@ const Services = () => {
       });
     };
   }, []);
+
+  // Añadimos la función de scroll suave que usamos en el resto
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetPosition = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <section id="services" className="section bg-osteo-light-gray">
@@ -119,15 +133,16 @@ const Services = () => {
             <p className="text-gray-700 mb-6">
               Contacta conmigo para una consulta inicial donde evaluaré tu caso y te recomendaré el enfoque más adecuado para ti.
             </p>
-            <a 
-              href="#contact" 
+            {/* Convertido el enlace en un botón con scroll */}
+            <button 
+              onClick={() => scrollToSection('contact')} 
               className="btn btn-primary px-8 py-3 rounded-full inline-flex items-center"
             >
               <span>Contactar</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>
