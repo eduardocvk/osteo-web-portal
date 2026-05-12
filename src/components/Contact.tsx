@@ -1,4 +1,8 @@
 
+<section id="contacto" className="section contact">
+  {/* todo el contenido del contacto */}
+</section>
+
 import { useEffect, useRef } from 'react';
 import { Phone, MapPin, Clock, Instagram } from 'lucide-react';
 
