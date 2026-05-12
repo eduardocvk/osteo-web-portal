@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN3RTXLXK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CN3RTXLXK1');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eduardo Callejo | Osteopatía en Madrid | Alivio del dolor y bienestar</title>
+    <meta name="description" content="Osteópata en Madrid especializado en dolor de espalda, estrés, lesiones deportivas y bienestar. Reserva tu cita ahora con Eduardo Callejo." />
+    <meta name="author" content="Eduardo Callejo" />
+    <link rel="canonical" href="https://osteopatiamadrid.com/">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="msvalidate.01" content="6F20456E5DD8EAAB89C307B36DA57810" />
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Eduardo Callejo - Osteopatía en Madrid",
+  "image": "https://osteopatiamadrid.com/wimages/Logo-Eduardo-web.png",
+  "@id": "https://osteopatiamadrid.com",
+  "url": "https://osteopatiamadrid.com",
+  "telephone": "+34 676435634",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaza Santa Cristina 4",
+    "addressLocality": "Madrid",
+    "postalCode": "28011",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.4139275, 
+    "longitude": -3.7274617
+  },
+  "openingHours": "Mo-Fr 15:30-21:00",
+  "priceRange": "€€"
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Eduardo Callejo Osteopatía",
+  "image": "https://osteopatiamadrid.com/images/Logo-Eduardo-web.png", 
+  "@id": "https://www.osteopatiamadrid.com/#localbusiness",
+  "url": "https://www.osteopatiamadrid.com/",
+  "telephone": "+34676435634",
+  "priceRange": "40€ - 45€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaza de Santa Cristina 4",
+    "addressLocality": "Madrid",
+    "postalCode": "28011",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+   "latitude": 40.4139275, 
+    "longitude": -3.7274617
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "16:00",
+    "closes": "20:00"
+  },
+  "medicalSpecialty": "Osteopathic",
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Osteopatía Estructural"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Osteopatía Visceral"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Osteopatía Craneal"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "¿Qué problemas trata la osteopatía?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La osteopatía trata dolencias como dolor de espalda (cervicalgia, lumbalgia), migrañas, vértigos, problemas digestivos, estrés, bruxismo y lesiones deportivas, buscando el origen del problema."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Cuánto dura la sesión de osteopatía?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La sesión dura entre 60 y 75 minutos. La primera visita suele ser un poco más larga para realizar una evaluación completa."
+    }
+  }, {
+    "@type": "Question",
+    "name": "¿Cuál es el precio de una sesión de osteopatía?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La sesión en consulta (Puerta del Ángel) cuesta 40€. El servicio de osteopatía a domicilio en Madrid tiene un precio de 45€."
+    }
+  }]
+}
+</script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </body>
+</html>
