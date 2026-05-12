@@ -43,7 +43,7 @@ const Header = () => {
           }}
         >
           <img 
-            src="public/lovable-uploads/ff7b84d0-4305-4390-9301-a80d88af0b13.png" 
+            src="/lovable-uploads/eduardo-callejo-logo.png" 
             alt="Eduardo Callejo Osteopatía Logo" 
             className="h-10 mr-2"
           />
@@ -76,7 +76,7 @@ const Header = () => {
         >
           <div className="flex justify-between items-center p-6">
             <img 
-              src="public/lovable-uploads/ff7b84d0-4305-4390-9301-a80d88af0b13.png" 
+              src="/lovable-uploads/eduardo-callejo-logo.png" 
               alt="Eduardo Callejo Osteopatía Logo" 
               className="h-8"
             />
