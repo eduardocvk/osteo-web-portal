@@ -32,7 +32,7 @@ const WhatsAppButton = () => {
     >
       <div className="absolute w-full h-full rounded-full animate-pulse-soft opacity-30"></div>
       <img 
-        src="public/lovable-uploads/7d88020a-241f-4d9f-8935-fced3d1adfdc.png" 
+        src="lovable-uploads/7d88020a-241f-4d9f-8935-fced3d1adfdc.png" 
         alt="WhatsApp" 
         className="w-16 h-16" 
       />
