@@ -39,7 +39,7 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center clip-path-wave pt-20 pb-32 px-6 bg-cover bg-center"
       style={{ 
-        backgroundImage: 'linear-gradient(rgba(42, 122, 130, 0.75), rgba(59, 169, 181, 0.65)), url("public/lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png")',
+        backgroundImage: 'linear-gradient(rgba(42, 122, 130, 0.75), rgba(59, 169, 181, 0.65)), url("lovable-uploads/d4003df2-a531-443f-b89b-cf2e90f85a11.png")',
         backgroundAttachment: 'fixed'
       }}
     >
