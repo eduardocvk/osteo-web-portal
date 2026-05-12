@@ -78,7 +78,7 @@ const Hero = () => {
             Reserva Consulta
           </button>
           <a 
-            href="#services" 
+            href="#servicios" 
             className="btn bg-transparent hover:bg-white/20 text-white border border-white/70 px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
           >
             Conoce mis servicios
@@ -88,7 +88,7 @@ const Hero = () => {
       
       <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <a 
-          href="#about" 
+          href="#sobre-mi" 
           className="animate-bounce inline-block mb-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
