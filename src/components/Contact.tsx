@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { Phone, MapPin, Clock } from 'lucide-react';
+import { Phone, MapPin, Clock, Instagram } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -20,6 +20,13 @@ const contactInfo = [
     title: "Horario",
     detail: "Lun-Vie: 16:00-20:30",
     icon: <Clock size={24} className="text-osteo-green" />,
+  },
+  {
+    id: 4,
+    title: "Instagram",
+    detail: "@osteopatiaeducallejo",
+    icon: <Instagram size={24} className="text-osteo-green" />,
+    href: "https://www.instagram.com/osteopatiaeducallejo/",
   },
 ];
 
