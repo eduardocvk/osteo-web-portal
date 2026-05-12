@@ -64,10 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				osteo: {
-					'green': '#006633', // Dark green from favicon
-					'light-green': '#88C474', // Lighter green for accents
-					'medium-green': '#4D8C4A', // Medium green for hover states
-					'dark-green': '#004D26', // Darker green for text
+					'green': '#3BA9B5', // Teal blue from new logo (primary)
+					'light-green': '#7FCB9D', // Soft green accent from logo
+					'medium-green': '#5BBFB0', // Mid teal-green for hover
+					'dark-green': '#2A7A82', // Deep teal for text
 					'background': '#F8F9FA',
 					'text': '#333333',
 					'light-gray': '#F3F4F6'
