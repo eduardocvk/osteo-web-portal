@@ -36,7 +36,7 @@ const WhatsAppButton = () => {
         alt="WhatsApp" 
         className="w-16 h-16" 
       />
-      <span className="absolute top-0 right-0 flex items-center justify-center w-5 h-5 bg-osteo-dark-blue text-white text-xs font-bold rounded-full transform translate-x-1 -translate-y-1">1</span>
+      <span className="absolute top-0 right-0 flex items-center justify-center w-5 h-5 bg-osteo-dark-blue text-white text-xs font-bold rounded-full transform translate-x-1 -translate-y-1"></span>
     </a>
   );
 };
