@@ -19,21 +19,6 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Servicios</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Osteopatía Estructural</a>
-              </li>
-              <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Osteopatía Visceral</a>
-              </li>
-              <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">Osteopatía Craneal</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -66,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/60 text-sm">
-          <p>© 2025 Eduardo Callejo Osteopatía. Todos los derechos reservados.</p>
+          <p>© 2026 Eduardo Callejo Osteopatía. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
