@@ -103,7 +103,7 @@ const Contact = () => {
                 <div className="space-y-4">
                   {contactInfo.map(item => (
                     <div key={item.id} className="flex items-center">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-osteo-light-green flex items-center justify-center mr-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-transparent flex items-center justify-center mr-4">
                         {item.icon}
                       </div>
                       <div>
