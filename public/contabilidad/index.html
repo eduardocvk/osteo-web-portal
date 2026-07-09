@@ -5,27 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Osteopatía - Contabilidad</title>
     
-    <!-- Aquí pones la URL de tu logo -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://osteopatiamadrid.com/lovable-uploads/eduardo-callejo-logo.png">
-
+    
+    <!-- Redirección automática inmediata -->
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbxfaD22Vve5SLT4NvdoVFYg37OpqH2Ysc8vmtQX8tz2emOFaZq_CGs2-7ZRCODVy9kDhw/exec">
+    
     <style>
+        /* Centramos el contenido de carga en la pantalla */
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-         
-            background-color: #e8eceb; 
-        }
-        iframe {
             width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #e8eceb; /* Mantenemos tu color de fondo */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        
+        /* Animación del círculo de carga */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #333; /* Color oscuro */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .fallback {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 15px;
+        }
+        
+        .fallback a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .fallback a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbxfaD22Vve5SLT4NvdoVFYg37OpqH2Ysc8vmtQX8tz2emOFaZq_CGs2-7ZRCODVy9kDhw/exec"></iframe>
+
+    <div class="spinner"></div>
+    <div class="message">Redirigiendo a Portal Osteopatía - Contabilidad...</div>
+    
+    <p class="fallback">
+        Si no te redirige automáticamente, 
+        <a href="https://script.google.com/macros/s/AKfycbxfaD22Vve5SLT4NvdoVFYg37OpqH2Ysc8vmtQX8tz2emOFaZq_CGs2-7ZRCODVy9kDhw/exec">haz clic aquí</a>.
+    </p>
+
+    <!-- Redirección mediante JavaScript -->
+    <script>
+        setTimeout(function() {
+            window.location.replace("https://script.google.com/macros/s/AKfycbxfaD22Vve5SLT4NvdoVFYg37OpqH2Ysc8vmtQX8tz2emOFaZq_CGs2-7ZRCODVy9kDhw/exec");
+        }, 100);
+    </script>
 </body>
 </html>
