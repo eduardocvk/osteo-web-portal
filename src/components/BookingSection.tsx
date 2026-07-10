@@ -52,9 +52,9 @@ const BookingSection = () => {
         >
           <div className="bg-white shadow-medium rounded-2xl p-8">
             <div className="w-full min-h-[600px] flex items-center justify-center rounded-xl overflow-hidden">
-              {/* Widget de Google Apps Script (Reservacita) */}
+              {/* Widget del frontend local de Reservacita */}
               <iframe 
-                src="https://script.google.com/macros/s/AKfycbwpWrPGs3kyr8l1hJhDFa9WBx_JZpQ3bqX05U_p9pGP401kAZGWcmw9V2mFI9YByKmb/exec"
+                src="/reserva/"
                 style={{ width: '100%', height: '800px', border: 'none' }}
                 title="Calendario de reservas"
                 allowFullScreen
