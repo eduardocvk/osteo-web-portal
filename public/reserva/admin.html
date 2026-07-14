@@ -2817,7 +2817,7 @@ const app = {
       })
       .then(response => response.json())
       .then(result => {
-        if (result && result.error) reject(result.error);
+        if (result && result.error) reject(new Error(result.error));
         else resolve(result.data);
       })
       .catch(error => reject(error));
@@ -3018,7 +3018,7 @@ const admin = {
     }).catch(err => {
       console.error('Error inicializando admin:', err);
       app.hideLoader();
-      app.showToast('Error al cargar datos. Verifica que la estructura de la hoja esté creada (Ajustes → Generar estructura).', 'error');
+      app.showToast(err.message || 'Error al cargar datos. Verifica la estructura de la hoja.', 'error');
     });
   },
 
@@ -3590,6 +3590,8 @@ const admin = {
       app.hideLoader();
     }).catch(err => {
       console.error(err);
+      var tbodyH = document.getElementById('horarios-tbody');
+      if (tbodyH) tbodyH.innerHTML = '<tr><td colspan="8" class="text-center text-danger" style="padding:32px;"><i class="ri-error-warning-line"></i> ' + (err.message || 'Error al cargar horarios') + '</td></tr>';
       app.hideLoader();
     });
   },
@@ -3783,7 +3785,12 @@ const admin = {
       this.state.servicios = data || [];
       this.renderServicios();
       app.hideLoader();
-    }).catch(err => { app.hideLoader(); });
+    }).catch(err => { 
+      console.error(err);
+      var tbody = document.getElementById('servicios-tbody');
+      if (tbody) tbody.innerHTML = '<tr><td colspan="6" class="text-center text-danger" style="padding:32px;"><i class="ri-error-warning-line"></i> ' + (err.message || 'Error al cargar servicios') + '</td></tr>';
+      app.hideLoader(); 
+    });
   },
 
   renderServicios: function() {
