@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwGIDvfxWq5cH-z6b_2Pvpikb9wXSrZJt1QsIbsUXs7sflK3uWBQGnUAJBILwzl9oX3/exec?admin=true">
   <base target="_top">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Admin — ReservaCita Eduardo Callejo</title>
+
+  <!-- PWA & Mobile Web App -->
+  <link rel="manifest" href="./admin-manifest.json">
+  <meta name="theme-color" content="#2A9D8F">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Reserva Admin">
+  <link rel="apple-touch-icon" href="https://osteopatiamadrid.com/lovable-uploads/eduardo-callejo-logo.png">
 
   <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1600,33 +1609,42 @@ tbody tr:hover {
 
 /* ─── Responsivo ─── */
 @media (max-width: 768px) {
+  html, body, .admin-body, .public-wrapper, .app-container {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   /* Público */
   .public-header {
-    padding: 16px 20px;
+    padding: 14px 16px;
   }
 
   .header-logo {
-    height: 44px;
+    height: 38px;
   }
 
   .booking-container {
-    padding: 20px 16px 40px;
+    padding: 16px 12px 32px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .step-title {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .slots-grid {
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+    gap: 8px;
   }
 
   .step-line {
-    width: 32px;
+    width: 24px;
   }
 
   /* Admin */
@@ -1635,26 +1653,70 @@ tbody tr:hover {
   }
 
   .btn-mobile-menu {
-    display: none; /* Oculto en escritorio */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     font-size: 24px;
     color: var(--text-dark);
     cursor: pointer;
-    margin-right: 12px;
-    padding: 4px;
+    margin-right: 8px;
+    padding: 6px;
+    border-radius: var(--radius-sm);
   }
 
   .topbar {
-    padding: 0 20px;
+    padding: 0 14px;
+    height: 56px;
   }
 
   .view-container {
-    padding: 0 20px 20px;
+    padding: 0 12px 20px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .kpi-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .card {
+    padding: 16px 14px;
+    margin-bottom: 14px;
+  }
+
+  .filters-bar {
+    gap: 10px;
+  }
+
+  .filter-group {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 130px;
+  }
+
+  .filter-group select,
+  .filter-group input[type="date"] {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: 95vw;
+    padding: 20px 16px;
+    margin: 10px auto;
+  }
+
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table th, table td {
+    padding: 10px 8px;
+    font-size: 13px;
   }
 }
 
@@ -1662,12 +1724,13 @@ tbody tr:hover {
   /* Admin Sidebar Mobile */
   .sidebar {
     position: fixed;
-    left: -260px;
+    left: -280px;
     top: 0;
     bottom: 0;
+    width: 260px;
     z-index: 1000;
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
   }
   .sidebar.active {
     left: 0;
@@ -1678,37 +1741,35 @@ tbody tr:hover {
     inset: 0;
     background: rgba(0,0,0,0.5);
     z-index: 999;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
   }
   .sidebar-overlay.active {
     display: block;
   }
-  .btn-mobile-menu {
-    display: inline-block;
-  }
   .topbar {
-    padding: 0 16px;
+    padding: 0 10px;
   }
   .topbar-title h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .step-line {
-    width: 20px;
+    width: 14px;
   }
 
   .step-circle {
-    width: 32px;
-    height: 32px;
-    font-size: 13px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
   }
 
   .services-grid {
-    gap: 12px;
+    gap: 10px;
+    grid-template-columns: 1fr;
   }
 
   .service-card {
-    padding: 16px;
+    padding: 14px;
   }
 
   .calendar-grid {
@@ -1717,6 +1778,7 @@ tbody tr:hover {
 
   .wizard-nav {
     flex-direction: column-reverse;
+    gap: 8px;
   }
 
   .wizard-nav .btn {
@@ -1725,19 +1787,50 @@ tbody tr:hover {
 
   .kpi-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   .kpi-card {
-    padding: 14px;
+    padding: 12px 10px;
   }
 
   .kpi-value {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+  }
+
+  .filter-group {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  .modal-content {
+    width: 96%;
+    padding: 16px 12px;
+  }
+
+  .modal-footer {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
+
+  .hide-mobile {
+    display: none !important;
   }
 }
 
 /* ─── Utilidades ─── */
+.hide-mobile { display: inline; }
+@media (max-width: 480px) {
+  .hide-mobile { display: none !important; }
+}
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-muted { color: var(--text-muted); }
@@ -1854,8 +1947,8 @@ tbody tr:hover {
 <body class="admin-body">
 
   <!-- ─── Pantalla de Login ─── -->
-  <div id="login-screen" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #F8FAFB; width: 100%;">
-    <div class="card" style="background: #fff; border-radius: 16px; padding: 48px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 400px; width: 100%;">
+  <div id="login-screen" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: #F8FAFB; width: 100%; padding: 16px;">
+    <div class="card" style="background: #fff; border-radius: 16px; padding: 40px 24px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 400px; width: 100%;">
       <div class="icon" style="font-size: 48px; margin-bottom: 16px;">🔒</div>
       <h2 style="color: #264653; margin: 0 0 8px;">Panel de Administración</h2>
       <p style="color: #8E8E9E; margin: 0 0 24px; font-size: 14px;">Introduce la contraseña para acceder.</p>
@@ -1902,10 +1995,13 @@ tbody tr:hover {
       <div style="flex-grow: 1;"></div>
 
       <ul class="nav-links" style="margin-bottom: 0;">
+        <li class="nav-item" id="btn-install-pwa" onclick="admin.installPWA()" style="display: none; background: rgba(42,157,143,0.12); color: var(--primary); font-weight: 600;">
+          <i class="ri-smartphone-line"></i> Instalar en móvil
+        </li>
         <li class="nav-item" onclick="admin.navigate('ajustes', this)">
           <i class="ri-settings-3-line"></i> Ajustes
         </li>
-        <li class="nav-item" onclick="window.open('index.html', '_blank')">
+        <li class="nav-item" onclick="window.open('https://osteopatiamadrid.com/reserva', '_blank')">
           <i class="ri-external-link-line"></i> Ver web pública
         </li>
         <li class="nav-item" onclick="admin.logout()" style="color: #E63946;">
@@ -1922,8 +2018,8 @@ tbody tr:hover {
     <main class="main-content">
       <!-- Topbar -->
       <header class="topbar">
-        <div style="display: flex; align-items: center;">
-          <button class="btn-mobile-menu" onclick="admin.toggleMobileMenu()">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="btn-mobile-menu" onclick="admin.toggleMobileMenu()" aria-label="Abrir menú">
             <i class="ri-menu-line"></i>
           </button>
           <div class="topbar-title">
@@ -1932,7 +2028,7 @@ tbody tr:hover {
         </div>
         <div class="topbar-actions">
           <button class="btn btn-primary btn-sm" onclick="admin.openNewCitaModal()">
-            <i class="ri-add-line"></i> Nueva cita
+            <i class="ri-add-line"></i> <span class="hide-mobile">Nueva cita</span>
           </button>
         </div>
       </header>
@@ -2765,6 +2861,81 @@ tbody tr:hover {
     </div>
   </div>
 
+  <!-- Modal: Editar Cita (Admin) -->
+  <div class="modal-overlay" id="modal-editar-cita">
+    <div class="modal-content" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="ri-edit-line text-primary"></i> Modificar cita</h3>
+        <button class="modal-close" onclick="app.closeModal('modal-editar-cita')">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <input type="hidden" id="edit-cita-id">
+
+      <div class="form-group">
+        <label>Servicio <span class="required">*</span></label>
+        <select id="edit-cita-servicio" class="form-control">
+          <option value="">Seleccionar...</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Fecha <span class="required">*</span></label>
+          <input type="date" id="edit-cita-fecha" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Hora <span class="required">*</span></label>
+          <input type="time" id="edit-cita-hora" class="form-control" step="900">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Estado de la cita <span class="required">*</span></label>
+        <select id="edit-cita-estado" class="form-control">
+          <option value="confirmada">Confirmada</option>
+          <option value="completada">Completada</option>
+          <option value="cancelada">Cancelada</option>
+          <option value="no_show">No presentado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Nombre del cliente <span class="required">*</span></label>
+        <input type="text" id="edit-cita-nombre" class="form-control" placeholder="Nombre completo">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="edit-cita-email" class="form-control" placeholder="email@ejemplo.com">
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" id="edit-cita-telefono" class="form-control" placeholder="+34...">
+        </div>
+      </div>
+
+      <div class="form-group" id="edit-cita-direccion-group" style="display: none;">
+        <label>Dirección (domicilio)</label>
+        <input type="text" id="edit-cita-direccion" class="form-control" placeholder="Calle, número, ciudad...">
+      </div>
+
+      <div class="form-group">
+        <label>Notas internas</label>
+        <textarea id="edit-cita-notas" class="form-control" rows="2" placeholder="Notas internas..."></textarea>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="app.closeModal('modal-editar-cita')">Cancelar</button>
+        <button class="btn btn-primary" onclick="admin.guardarModificacionCita()">
+          <i class="ri-save-line"></i> Guardar cambios
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal: Detalle de Cita -->
   <div class="modal-overlay" id="modal-detalle-cita">
     <div class="modal-content">
@@ -2785,6 +2956,7 @@ tbody tr:hover {
 
   <!-- JavaScript -->
   <script>
+
 /**
  * JS_Global.html — Utilidades compartidas entre vista pública y admin.
  * Patrón de app singleton con helpers reutilizables.
@@ -2803,7 +2975,7 @@ const app = {
 
   // ─── Wrapper de google.script.run como Promise ───
   
-  // ─── Fetch API ───
+  // ─── Fetch API REST ───
   fetchData: function(serverFunctionName, ...args) {
     return new Promise((resolve, reject) => {
       var API_URL = "https://script.google.com/macros/s/AKfycbwpWrPGs3kyr8l1hJhDFa9WBx_JZpQ3bqX05U_p9pGP401kAZGWcmw9V2mFI9YByKmb/exec";
@@ -2819,13 +2991,11 @@ const app = {
       .then(response => response.json())
       .then(result => {
         if (result && result.error) reject(new Error(result.error));
-        else resolve(result.data);
+        else resolve(result ? (result.data !== undefined ? result.data : result) : null);
       })
       .catch(error => reject(error));
     });
   },
-    
-
   // ─── Loader ───
   showLoader: function(msg) {
     const loader = document.getElementById('global-loader');
@@ -2954,9 +3124,10 @@ const app = {
     return window.confirm(msg);
   }
 };
-</script>
 
+</script>
   <script>
+
 /**
  * JS_Admin.html — Lógica completa del panel de administración.
  * Navegación SPA, CRUD de citas/horarios/servicios/clientes/ajustes.
@@ -3015,12 +3186,66 @@ const admin = {
       this.state.servicios = servicios || [];
       this.renderDashboard();
       this.populateServicioSelects();
+      this.initPWA();
       app.hideLoader();
     }).catch(err => {
       console.error('Error inicializando admin:', err);
       app.hideLoader();
       app.showToast(err.message || 'Error al cargar datos. Verifica la estructura de la hoja.', 'error');
     });
+  },
+
+  // ─── PWA & Instalación ───
+  deferredPrompt: null,
+  initPWA: function() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').catch(function(err) {
+          console.log('SW registration:', err);
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      this.deferredPrompt = e;
+      var btn = document.getElementById('btn-install-pwa');
+      if (btn) btn.style.display = 'flex';
+    });
+
+    window.addEventListener('appinstalled', () => {
+      this.deferredPrompt = null;
+      var btn = document.getElementById('btn-install-pwa');
+      if (btn) btn.style.display = 'none';
+      app.showToast('¡Panel Admin instalado con éxito!', 'success');
+    });
+
+    // Mostrar botón también en iOS para instrucciones
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    var isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    if (isIOS && !isStandalone) {
+      var btn = document.getElementById('btn-install-pwa');
+      if (btn) btn.style.display = 'flex';
+    }
+  },
+
+  installPWA: function() {
+    if (this.deferredPrompt) {
+      this.deferredPrompt.prompt();
+      this.deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted install prompt');
+        }
+        this.deferredPrompt = null;
+      });
+    } else {
+      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      if (isIOS) {
+        alert('Para instalar en tu iPhone/iPad:\n1. Pulsa el botón Compartir (icono ⎋ abajo en Safari)\n2. Selecciona "Añadir a pantalla de inicio" 📲');
+      } else {
+        alert('Para instalar la app:\nPulsa el menú de tu navegador (⋮) y selecciona "Instalar aplicación" o "Añadir a pantalla de inicio" 📲');
+      }
+    }
   },
 
   login: function() {
@@ -3175,7 +3400,7 @@ const admin = {
     var domingo = new Date(lunes);
     domingo.setDate(lunes.getDate() + 6);
 
-    headerEl.textContent = 'Semana del ' + app.formatDateShort(lunes.toISOString().split('T')[0]) + ' al ' + app.formatDateShort(domingo.toISOString().split('T')[0]);
+    headerEl.textContent = 'Semana del ' + app.formatDateShort(app.dateToString(lunes)) + ' al ' + app.formatDateShort(app.dateToString(domingo));
 
     // Generar días de la semana
     var diasNombres = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
@@ -3395,9 +3620,14 @@ const admin = {
         '<td>' + tipoBadge + '</td>' +
         '<td>' + estadoBadge + '</td>' +
         '<td>' +
-          '<button class="btn-icon" title="Ver detalle" onclick="admin.showDetalleCita(' + JSON.stringify(c).replace(/"/g, '&quot;') + ')">' +
-            '<i class="ri-eye-line"></i>' +
-          '</button>' +
+          '<div style="display: flex; gap: 4px; align-items: center;">' +
+            '<button class="btn-icon text-primary" title="Modificar cita" onclick="admin.openEditarCitaModal(' + JSON.stringify(c).replace(/"/g, '&quot;') + ')">' +
+              '<i class="ri-edit-line"></i>' +
+            '</button>' +
+            '<button class="btn-icon" title="Ver detalle" onclick="admin.showDetalleCita(' + JSON.stringify(c).replace(/"/g, '&quot;') + ')">' +
+              '<i class="ri-eye-line"></i>' +
+            '</button>' +
+          '</div>' +
         '</td>' +
         '</tr>';
     });
@@ -3455,10 +3685,11 @@ const admin = {
 
     // Acciones según estado
     var actionsHtml = '<button class="btn btn-secondary" onclick="app.closeModal(\'modal-detalle-cita\')">Cerrar</button>';
+    actionsHtml += ' <button class="btn btn-primary btn-sm" onclick="app.closeModal(\'modal-detalle-cita\'); admin.openEditarCitaModal(' + JSON.stringify(cita).replace(/"/g, '&quot;') + ')"><i class="ri-edit-line"></i> Modificar</button>';
     if (cita.Estado === 'confirmada') {
       actionsHtml += ' <button class="btn btn-danger btn-sm" onclick="admin.cambiarEstadoCita(\'' + cita.ID + '\', \'cancelada\')"><i class="ri-close-circle-line"></i> Cancelar</button>';
       actionsHtml += ' <button class="btn btn-secondary btn-sm" onclick="admin.cambiarEstadoCita(\'' + cita.ID + '\', \'no_show\')"><i class="ri-user-unfollow-line"></i> No presentado</button>';
-      actionsHtml += ' <button class="btn btn-primary btn-sm" onclick="admin.cambiarEstadoCita(\'' + cita.ID + '\', \'completada\')"><i class="ri-check-line"></i> Completada</button>';
+      actionsHtml += ' <button class="btn btn-success btn-sm" onclick="admin.cambiarEstadoCita(\'' + cita.ID + '\', \'completada\')"><i class="ri-check-line"></i> Completada</button>';
     }
     actions.innerHTML = actionsHtml;
 
@@ -3475,8 +3706,80 @@ const admin = {
       if (result && result.success) {
         app.showToast('Estado actualizado', 'success');
         this.loadCitas();
+        if (this.state.citas) this.refreshDashboard();
       } else {
         app.showToast(result.message || 'Error al actualizar', 'error');
+      }
+    }).catch(err => {
+      app.hideLoader();
+      app.showToast('Error de conexión', 'error');
+    });
+  },
+
+  // ─── Modificar Cita ───
+  openEditarCitaModal: function(cita) {
+    if (!cita) return;
+    this.populateServicioSelects();
+
+    document.getElementById('edit-cita-id').value = cita.ID || '';
+    document.getElementById('edit-cita-servicio').value = cita.Servicio_ID || '';
+    document.getElementById('edit-cita-fecha').value = cita.Fecha || '';
+    document.getElementById('edit-cita-hora').value = (cita.Hora_Inicio || '').substring(0, 5);
+    document.getElementById('edit-cita-estado').value = cita.Estado || 'confirmada';
+    document.getElementById('edit-cita-nombre').value = cita.Cliente_Nombre || '';
+    document.getElementById('edit-cita-email').value = cita.Cliente_Email || '';
+    document.getElementById('edit-cita-telefono').value = cita.Cliente_Telefono || '';
+    document.getElementById('edit-cita-direccion').value = cita.Cliente_Direccion || '';
+    document.getElementById('edit-cita-notas').value = cita.Notas || '';
+
+    var select = document.getElementById('edit-cita-servicio');
+    var updateDirVisibility = function() {
+      var svc = admin.state.servicios.find(s => s.ID == select.value);
+      var isDom = (svc && svc.Tipo === 'domicilio') || (cita.Tipo === 'domicilio' && !svc);
+      document.getElementById('edit-cita-direccion-group').style.display = isDom ? 'block' : 'none';
+    };
+    select.onchange = updateDirVisibility;
+    updateDirVisibility();
+
+    app.openModal('modal-editar-cita');
+  },
+
+  guardarModificacionCita: function() {
+    var id = document.getElementById('edit-cita-id').value;
+    var servicioId = document.getElementById('edit-cita-servicio').value;
+    var fecha = document.getElementById('edit-cita-fecha').value;
+    var hora = document.getElementById('edit-cita-hora').value;
+    var estado = document.getElementById('edit-cita-estado').value;
+    var nombre = document.getElementById('edit-cita-nombre').value.trim();
+
+    if (!id || !servicioId || !fecha || !hora || !nombre) {
+      app.showToast('Rellena al menos servicio, fecha, hora y nombre', 'warning');
+      return;
+    }
+
+    var datos = {
+      ID: id,
+      servicio_id: servicioId,
+      fecha: fecha,
+      hora: hora,
+      estado: estado,
+      nombre: nombre,
+      email: document.getElementById('edit-cita-email').value.trim(),
+      telefono: document.getElementById('edit-cita-telefono').value.trim(),
+      direccion: document.getElementById('edit-cita-direccion').value.trim(),
+      notas: document.getElementById('edit-cita-notas').value.trim()
+    };
+
+    app.showLoader('Guardando cambios...');
+    app.fetchData('modificarReservaAdmin', datos).then(result => {
+      app.hideLoader();
+      if (result && result.success) {
+        app.showToast('Cita modificada correctamente', 'success');
+        app.closeModal('modal-editar-cita');
+        this.loadCitas();
+        if (this.state.citas) this.refreshDashboard();
+      } else {
+        app.showToast((result && result.message) || 'Error al modificar cita', 'error');
       }
     }).catch(err => {
       app.hideLoader();
@@ -3522,16 +3825,20 @@ const admin = {
   },
 
   populateServicioSelects: function() {
-    var select = document.getElementById('new-cita-servicio');
-    if (!select) return;
-    select.innerHTML = '<option value="">Seleccionar...</option>';
-    (this.state.servicios || []).forEach(s => {
-      if (s.Activo === true || s.Activo === 'TRUE') {
-        var opt = document.createElement('option');
-        opt.value = s.ID;
-        opt.textContent = s.Nombre + ' (' + s.Duracion_Minutos + 'min - ' + s.Precio + '€)';
-        select.appendChild(opt);
-      }
+    var selects = [document.getElementById('new-cita-servicio'), document.getElementById('edit-cita-servicio')];
+    selects.forEach(select => {
+      if (!select) return;
+      var currentVal = select.value;
+      select.innerHTML = '<option value="">Seleccionar...</option>';
+      (this.state.servicios || []).forEach(s => {
+        if (s.Activo === true || s.Activo === 'TRUE' || String(s.ID) === String(currentVal)) {
+          var opt = document.createElement('option');
+          opt.value = s.ID;
+          opt.textContent = s.Nombre + ' (' + s.Duracion_Minutos + 'min - ' + s.Precio + '€)';
+          select.appendChild(opt);
+        }
+      });
+      if (currentVal) select.value = currentVal;
     });
   },
 
@@ -4145,8 +4452,8 @@ const admin = {
     }).catch(err => { app.hideLoader(); app.showToast('Error de conexión', 'error'); });
   }
 };
-</script>
 
+</script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
