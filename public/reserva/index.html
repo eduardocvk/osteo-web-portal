@@ -543,6 +543,12 @@ a:hover { color: var(--primary-hover); }
   opacity: 0.4;
 }
 
+.calendar-day.no-availability {
+  background: #F1F3F5;
+  color: #A0A6AD;
+  opacity: 1;
+}
+
 .calendar-day.empty {
   cursor: default;
 }
@@ -2562,6 +2568,7 @@ const reserva = {
   calYear: null,
   calMonth: null,
   availableDays: {},
+  availabilityRequestId: 0,
 
   // ─── Inicialización ───
   init: function(preselectedService) {
@@ -2847,6 +2854,29 @@ const reserva = {
     }
 
     grid.innerHTML = html;
+    this.loadMonthAvailability(year, month);
+  },
+
+  loadMonthAvailability: function(year, month) {
+    if (!this.selectedService) return;
+
+    var requestId = ++this.availabilityRequestId;
+    var serviceId = this.selectedService.ID;
+    app.fetchData('getMonthAvailability', year, month, serviceId).then(days => {
+      if (requestId !== this.availabilityRequestId || year !== this.calYear || month !== this.calMonth) return;
+      this.availableDays = days || {};
+
+      document.querySelectorAll('#calendar-grid .calendar-day[data-date]').forEach(dayEl => {
+        var dateStr = dayEl.getAttribute('data-date');
+        if (this.availableDays[dateStr] === false && !dayEl.classList.contains('disabled')) {
+          dayEl.classList.add('disabled', 'no-availability');
+          dayEl.removeAttribute('onclick');
+          dayEl.setAttribute('title', 'Sin disponibilidad');
+        }
+      });
+    }).catch(err => {
+      console.error('Error cargando disponibilidad mensual:', err);
+    });
   },
 
   prevMonth: function() {
