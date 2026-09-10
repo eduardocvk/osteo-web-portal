@@ -40,7 +40,7 @@ const posts = [
 ];
 
 const InstagramSection = () => (
-  <section id="instagram" className="bg-[#f5f1e9]">
+  <section id="instagram" className="bg-osteo-light-gray">
     <div className="section">
       <div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl animate-on-scroll">
@@ -71,7 +71,7 @@ const InstagramSection = () => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${post.title}. Ver publicación en Instagram`}
-            className="group relative w-[82vw] max-w-[360px] flex-none snap-center overflow-hidden rounded-[1.4rem] bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-osteo-green focus-visible:ring-offset-4 focus-visible:ring-offset-[#f5f1e9] sm:w-auto sm:max-w-none animate-on-scroll"
+            className="group relative w-[82vw] max-w-[360px] flex-none snap-center overflow-hidden rounded-[1.4rem] bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-osteo-green focus-visible:ring-offset-4 focus-visible:ring-offset-osteo-light-gray sm:w-auto sm:max-w-none animate-on-scroll"
             style={{ transitionDelay: `${Math.min(index, 2) * 70}ms` }}
           >
             <div className="aspect-[4/5] overflow-hidden bg-[#eee8dc]">
