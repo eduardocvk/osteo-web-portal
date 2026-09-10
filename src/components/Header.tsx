@@ -53,6 +53,7 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-1">
           <button onClick={() => scrollToSection('about')} className="nav-link text-white hover:text-osteo-light-green">Sobre mí</button>
           <button onClick={() => scrollToSection('services')} className="nav-link text-white hover:text-osteo-light-green">Servicios</button>
+          <button onClick={() => scrollToSection('instagram')} className="nav-link text-white hover:text-osteo-light-green">Consejos</button>
           <button onClick={() => scrollToSection('contact')} className="nav-link text-white hover:text-osteo-light-green">Contacto</button>
           <button onClick={() => scrollToSection('booking')} className="bg-white text-osteo-green hover:bg-osteo-light-green hover:text-osteo-dark-green ml-4 px-6 py-2 rounded-full transition-colors font-medium">
             Reserva Cita
@@ -109,6 +110,12 @@ const Header = () => {
               className="text-xl font-medium text-white hover:text-osteo-light-green transition-colors"
             >
               Servicios
+            </button>
+            <button
+              onClick={() => scrollToSection('instagram')}
+              className="text-xl font-medium text-white hover:text-osteo-light-green transition-colors"
+            >
+              Consejos
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
