@@ -40,8 +40,8 @@ const posts = [
 ];
 
 const InstagramSection = () => (
-  <section id="instagram" className="bg-osteo-light-gray">
-    <div className="section">
+  <section id="instagram" className="section bg-osteo-light-gray">
+    <div>
       <div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl animate-on-scroll">
           <p className="section-subtitle !mb-3 !text-left">DIVULGACIÓN Y BIENESTAR</p>
